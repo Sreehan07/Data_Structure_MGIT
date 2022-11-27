@@ -17,8 +17,27 @@ node *linker=NULL;
 
 void insert(int data)//inserting the data using this function...
 {
-    new
-}
+    newnode=(node*)malloc(sizeof(node));
+    newnode->data=data;
+    if(head==NULL)
+    {
+        head=newnode;
 
+    }
+    else
+    {
+        linker->pointer=newnode;
+
+    } 
+    linker=newnode;
+
+}
+void main()
+{
+    for(int i=0;i<=3;i++)
+    {
+        insert(i);
+    }
+}
 
 
