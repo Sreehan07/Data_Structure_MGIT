@@ -106,6 +106,17 @@ void random_del()
     temp1=temp->next->next;//incrementing the temp1 by 2.. {temp=temp->next is using for incrementing to next node}
     free(temp->next);
     temp->next=temp1;
+}
+void del_from_end()
+{
+    struct node *temp;
+    temp=head;
+    while(temp->next->next!=NULL)//to stop the temp value before the null node..
+    {
+        temp=temp->next;//incrementing the temp to next node
+    }
+        linker=temp;
+        free(temp->next);
     
 }
 void main()
@@ -126,5 +137,8 @@ void main()
     display();
     random_del();
     printf("after random deling \n");
+    display();
+    del_from_end();
+    printf("after random deleting \n");
     display();
 }
