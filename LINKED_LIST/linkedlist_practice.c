@@ -14,7 +14,7 @@ struct node
 // 2.create three pointer varibles
 struct node *head = NULL, *linker = NULL, *newnode = NULL;
 // 3.create a function to insert the values and create memory
-//.............................................................................................................
+//.................................................................................................................
 void insertion()
 {
     newnode = (struct node *)malloc(sizeof(struct node));
@@ -36,7 +36,7 @@ void insertion()
     linker = newnode; // pointing newnode to linker
 }
 // create a empty pointer to display the values
-//  ..........................................................................................................
+//  ................................................................................................................
 void display()
 {
     struct node *temp;
@@ -60,6 +60,7 @@ void delete_from_start()
         free(temp);        // deleting the first node
     }
 }
+//...................................................................................................................
 void insert_From_start()
 {
     newnode = (struct node *)malloc(sizeof(struct node));
@@ -68,6 +69,7 @@ void insert_From_start()
     newnode->next = head;
     head = newnode;
 }
+//...................................................................................................................
 void random_insert()
 {
     struct node *temp;
@@ -87,6 +89,7 @@ void random_insert()
     newnode->next = temp->next; // storing the address of next node into newnode
     temp->next = newnode;       // linking the address of newnode to temp of next...
 }
+//.................................................................................................................
 void random_del()
 {
     struct node *temp;
@@ -107,6 +110,7 @@ void random_del()
     free(temp->next);
     temp->next=temp1;
 }
+//.......................................................................................................................
 void del_from_end()
 {
     struct node *temp;
@@ -119,6 +123,7 @@ void del_from_end()
         free(temp->next);
     
 }
+//.........................................................................................................................
 void main()
 {
     for (int i = 0; i < 5; i++)
