@@ -1,18 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Que: What do you want?
-// Ans: I want to create a Linked List
-
-// assignment opertors:
-// 1) =
-// 2) +=
-// 3) -=
-// 4) *=
-// 5) /=
-// 6) %=
-
-// To store multiple data types in it
 struct Node
 {
     int data;

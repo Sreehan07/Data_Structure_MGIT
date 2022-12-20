@@ -14,7 +14,7 @@ struct node
 // 2.create three pointer varibles
 struct node *head = NULL, *linker = NULL, *newnode = NULL;
 // 3.create a function to insert the values and create memory
-//.................................................................................................................
+//.............................................................................................................
 void insertion()
 {
     newnode = (struct node *)malloc(sizeof(struct node));
@@ -96,32 +96,31 @@ void random_del()
     struct node *temp1;
     int index;
     int i = 0;
-    int j=0;
+    int j = 0;
     printf("enter the index values!!\n");
     scanf("%d", &index);
     temp = head;
-    
+
     while (temp != NULL && i < index - 1)
     {
-        temp=temp->next;
+        temp = temp->next;
         i++;
     }
-    temp1=temp->next->next;//incrementing the temp1 by 2.. {temp=temp->next is using for incrementing to next node}
+    temp1 = temp->next->next; // incrementing the temp1 by 2.. {temp=temp->next is using for incrementing to next node}
     free(temp->next);
-    temp->next=temp1;
+    temp->next = temp1;
 }
 //.......................................................................................................................
 void del_from_end()
 {
     struct node *temp;
-    temp=head;
-    while(temp->next->next!=NULL)//to stop the temp value before the null node..
+    temp = head;
+    while (temp->next->next != NULL) // to stop the temp value before the null node..
     {
-        temp=temp->next;//incrementing the temp to next node
+        temp = temp->next; // incrementing the temp to next node
     }
-        linker=temp;
-        free(temp->next);
-    
+    linker = temp;
+    free(temp->next);
 }
 //.........................................................................................................................
 void main()
