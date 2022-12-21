@@ -1,20 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int *abc= new int[10];
-    for(int i=0;i<10;i++)
+    int *abc = new int[10];
+    for (int i = 0; i < 10; i++)
     {
-        abc[i]=i;
+        abc[i] = i;
     }
-    for(int i=0;i<10;i++)
+    for (int i = 0; i < 10; i++)
     {
-        cout<<abc[i]<<endl;
+        cout << abc[i] << endl;
     }
     delete[] abc;
-    cout<<"after del"<<endl;
-    for(int i=0;i<10;i++)
+    cout << "after del" << endl;
+    for (int i = 0; i < 10; i++)
     {
-        cout<<abc[i];
+        cout << abc[i];
     }
 }
